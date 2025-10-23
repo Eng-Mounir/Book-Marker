@@ -1,0 +1,65 @@
+.container{
+    width: 90%;
+}
+body{
+    background-color: #f7ecde;
+}
+main h1 {
+    font-size: 50px;
+    font-family: Pacifico, cursive;
+    color: rgb(53, 46, 40);
+    isolation: isolate;
+}
+h1::after{
+    content: "";
+            position: absolute;
+            width: 100%;
+            height: 30%;
+            left: 0px;
+            bottom: 8px;
+            background-color: rgb(254, 194, 96);
+            z-index: -1;
+            transition: height 350ms;
+}
+h1:hover::after {
+    height: 55%;
+}
+
+
+.all-content::before {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 1px;
+    top: 25%;
+    transform: translateX(-50%);
+    left: 50%;
+    border-bottom: 3px dotted rgba(53, 46, 40, 0.5);
+    
+}
+.all-content::after {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 1px;
+    top: 73%;
+    transform: translateX(-50%);
+    left: 50%;
+    border-bottom: 3px dotted rgba(53, 46, 40, 0.5);
+    
+}
+.all-content h2 {
+    font-family: "Righteous", cursive;
+    font-size: 25px;
+    background-image: linear-gradient(90deg, #3ca55c, #b5ac49, #3ca55c);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s linear infinite;
+}
+
+@keyframes shine {
+    to {
+        background-position: 200%;
+    }
+}
